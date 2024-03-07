@@ -23,6 +23,10 @@ namespace CG
         void Loop();
         void Terminate();
 
+        
+
+       
+
     private:
         void Update(double dt);
         void Render();

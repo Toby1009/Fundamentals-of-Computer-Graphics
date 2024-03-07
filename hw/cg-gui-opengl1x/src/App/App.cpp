@@ -105,6 +105,9 @@ namespace CG
 		return true;
 	}
 
+
+	
+
 	void App::Loop()
 	{
 		while (!glfwWindowShouldClose(mainWindow))
@@ -131,11 +134,19 @@ namespace CG
 				controlWindow->Display();
 			}
 
+			glfwSetInputMode(mainWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+			glfwSetCursorPosCallback(mainWindow, mainScene->mouse_callback);
+			glfwSetScrollCallback(mainWindow, mainScene->scroll_callback);
+
+
 			// GUI Rendering
 			ImGui::Render();
 
 			// Render 3D scene
 			Render();
+
+
 
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -144,6 +155,17 @@ namespace CG
 			//  For this specific demo app we could also call glfwMakeContextCurrent(window) directly)
 			ImGuiIO& io = ImGui::GetIO();
 			(void)io;
+			
+			
+			if (ImGui::IsMouseDown(0))
+			{
+				MainScene::Pos offset;
+				offset.x = io.MouseDelta.x;
+				offset.y = io.MouseDelta.y;
+				mainScene->OnMouse(offset);
+			}
+			
+
 			if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 			{
 				GLFWwindow* backup_current_context = glfwGetCurrentContext();
@@ -155,6 +177,9 @@ namespace CG
 			glfwSwapBuffers(mainWindow);
 		}
 	}
+
+	
+	
 
 	void App::Terminate()
 	{

@@ -19,7 +19,7 @@ namespace CG
 	public:
 
 		struct Pos {
-			GLfloat x, y; 
+			GLfloat x=0, y=0; 
 		};
 		MainScene();
 		~MainScene();
@@ -30,6 +30,13 @@ namespace CG
 
 		void OnResize(int width, int height);
 		void OnKeyboard(int key, int action);
+
+		void OnScroll(int offset);
+
+		static void mouse_callback(GLFWwindow* window, double xoffset, double yoffset);
+		static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+
+		void OnMouse(Pos offset);
 
 		void SetMode(int mode);
 
@@ -43,6 +50,8 @@ namespace CG
 		Pos originPos;
 		Pos smallOPos, bigOPos; //small cycle pos , big cycle pos
 		GLfloat rotated = 0;
+		
+
 	};
 }
 
