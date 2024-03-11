@@ -33,7 +33,6 @@ namespace CG
 
 		void OnScroll(int offset);
 
-		static void mouse_callback(GLFWwindow* window, double xoffset, double yoffset);
 		static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
 		void OnMouse(Pos offset);

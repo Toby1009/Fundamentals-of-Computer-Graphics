@@ -136,7 +136,6 @@ namespace CG
 
 			glfwSetInputMode(mainWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-			glfwSetCursorPosCallback(mainWindow, mainScene->mouse_callback);
 			glfwSetScrollCallback(mainWindow, mainScene->scroll_callback);
 
 
@@ -155,16 +154,14 @@ namespace CG
 			//  For this specific demo app we could also call glfwMakeContextCurrent(window) directly)
 			ImGuiIO& io = ImGui::GetIO();
 			(void)io;
-			
-			
+
 			if (ImGui::IsMouseDown(0))
 			{
 				MainScene::Pos offset;
-				offset.x = io.MouseDelta.x;
-				offset.y = io.MouseDelta.y;
+				offset.x = io.MousePos.x;
+				offset.y = io.MousePos.y;
 				mainScene->OnMouse(offset);
 			}
-			
 
 			if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 			{

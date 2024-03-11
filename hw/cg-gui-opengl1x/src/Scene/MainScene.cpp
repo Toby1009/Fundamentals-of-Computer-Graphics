@@ -12,6 +12,12 @@ const float cameraSpeed = 0.05;
 
 float fov = 60.0f;
 
+bool firstMouse = true;
+
+
+float lastX = 0, lastY = 0;
+double yaw = -90, pitch = 0;
+
 namespace CG
 {
     MainScene::MainScene()
@@ -100,34 +106,18 @@ namespace CG
 
     void MainScene::OnMouse(Pos offset)
     {
-       
-    }
-
-
-    void MainScene::OnResize(int width, int height)
-    {
-        std::cout << "MainScene Resize: " << width << " " << height << std::endl;
-    }
-    bool firstMouse = true;
-    
-   
-    float lastX = 0, lastY = 0;
-    double yaw = -90,pitch = 0;
-    void MainScene::mouse_callback(GLFWwindow* window, double xpos, double ypos)
-    {
-        
         if (firstMouse == true)
         {
-            lastX = xpos;
-            lastY = ypos;
+            lastX = offset.x;
+            lastY = offset.y;
             firstMouse = false;
             return;
         }
 
-        float xoffset = xpos - lastX;
-        float yoffset = lastY - ypos;
-        lastX = xpos;
-        lastY = ypos;
+        float xoffset = offset.x - lastX;
+        float yoffset = lastY - offset.y;
+        lastX = offset.x;
+        lastY = offset.y;
 
 
         float sensitivity = 0.1f;
@@ -136,7 +126,7 @@ namespace CG
 
         yaw += xoffset;
         pitch += yoffset;
-        
+
         if (pitch > 89.0f)
             pitch = 89.0f;
         if (pitch < -89.0f)
@@ -148,6 +138,14 @@ namespace CG
         direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
         cameraFront = glm::normalize(direction);
     }
+
+
+    void MainScene::OnResize(int width, int height)
+    {
+        std::cout << "MainScene Resize: " << width << " " << height << std::endl;
+    }
+ 
+    
 
     void MainScene::OnKeyboard(int key, int action)
     {
@@ -171,11 +169,18 @@ namespace CG
                 cameraPos -= cameraSpeed * cameraFront;
                 break;
             case GLFW_KEY_A:
-                cameraPos -= cameraSpeed * cameraRight;
-                break;
-            case GLFW_KEY_D:
                 cameraPos += cameraSpeed * cameraRight;
                 break;
+            case GLFW_KEY_D:
+                cameraPos -= cameraSpeed * cameraRight;
+                break;
+            case GLFW_KEY_Q:
+                cameraPos -= cameraSpeed * cameraUp;
+                break;
+            case GLFW_KEY_E:
+                cameraPos += cameraSpeed * cameraUp;
+                break;
+
             }
        
     }
