@@ -27,6 +27,8 @@ namespace CG
 		auto Initialize() -> bool;
 		void Update(double dt);
 		void Render();
+		
+		void setStar();
 
 		void OnResize(int width, int height);
 		void OnKeyboard(int key, int action);
@@ -48,7 +50,6 @@ namespace CG
 		GLfloat R; //big cycle
 		Pos originPos;
 		Pos smallOPos, bigOPos; //small cycle pos , big cycle pos
-		GLfloat rotated = 0;
 		
 
 	};
