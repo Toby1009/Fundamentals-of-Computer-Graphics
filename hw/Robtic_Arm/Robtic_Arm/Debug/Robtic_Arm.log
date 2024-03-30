@@ -1,0 +1,26 @@
+﻿hand.obj : error LNK2019: 在函式 __imp__glutInit@8_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutInitWindowPosition@8_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutInitWindowSize@8_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutInitDisplayMode@4_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutMainLoop@0_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutCreateWindow@4_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutPostRedisplay@0"void __cdecl one(void)" (?one@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutSwapBuffers@0"void __cdecl display(void)" (?display@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutTimerFunc@12"void __cdecl timerFunction(int)" (?timerFunction@@YAXH@Z) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutKeyboardFunc@4_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutReshapeFunc@4_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutDisplayFunc@4_main 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp__glutSolidSphere@16"void __cdecl draw_fingers(float * const,float * const,float * const,float * const,float,float,float)" (?draw_fingers@@YAXQAM000MMM@Z) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewBindBuffer"void __cdecl draw_hand(void)" (?draw_hand@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewBufferSubData"void __cdecl draw_hand(void)" (?draw_hand@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewAttachShader"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewCompileShader"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewCreateProgram"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewCreateShader"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewLinkProgram"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewShaderSource"void __cdecl draw(void)" (?draw@@YAXXZ) 中參考了無法解析的外部符號
+hand.obj : error LNK2019: 在函式 __imp____glewUseProgram"void __cdecl draw_hand(void)" (?draw_hand@@YAXXZ) 中參考了無法解析的外部符號
+..\freeglut\freeglut.lib : warning LNK4272: 程式庫電腦類型 'x64' 與目標電腦類型 'x86' 發生衝突
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\lib\GLFW\glfw3.lib : warning LNK4272: 程式庫電腦類型 'x64' 與目標電腦類型 'x86' 發生衝突
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\lib\glew\glew32.lib : warning LNK4272: 程式庫電腦類型 'x64' 與目標電腦類型 'x86' 發生衝突
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\Debug\Robtic_Arm.exe : fatal error LNK1120: 22 個無法解析的外部符號

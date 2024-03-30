@@ -1,0 +1,15 @@
+﻿  hand.cpp
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,53): warning C4244: '引數': 將 'T' 轉換為 'GLint'，由於類型不同，可能導致資料遺失
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,53): warning C4244:         with
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,53): warning C4244:         [
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,53): warning C4244:             T=float
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,53): warning C4244:         ]
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,41): warning C4244: '引數': 將 'T' 轉換為 'GLint'，由於類型不同，可能導致資料遺失
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,41): warning C4244:         with
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,41): warning C4244:         [
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,41): warning C4244:             T=float
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(330,41): warning C4244:         ]
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(519,28): warning C4101: 'count_menu': 未參考的區域變數
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(519,6): warning C4101: 'main_menu': 未參考的區域變數
+C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\hand.cpp(519,16): warning C4101: 'action_menu': 未參考的區域變數
+  Robtic_Arm.vcxproj -> C:\Users\st990\OneDrive\文件\基礎電腦圖學\hw\Robtic_Arm\x64\Debug\Robtic_Arm.exe
